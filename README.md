@@ -22,6 +22,12 @@ $ npm install
 
 ## Running
 
+You'll need a Postgres instance running on your machine. If you have already, this step is optional.
+
+```
+$ docker compose up -d
+```
+
 To start a local instance of the app, execute:
 
 ```
