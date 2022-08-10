@@ -17,6 +17,7 @@ First, clone or download the repository. After that, install the projects depend
 ```
 $ git clone git@github.com:JuanTrindade/libcom-server.git
 $ cd libcom-server
+$ cp .env.example .env
 $ npm install
 ```
 
