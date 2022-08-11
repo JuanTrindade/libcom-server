@@ -14,7 +14,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "pg": "^8.7.3"
   },
   "devDependencies": {
     "jest": "^28.1.3",
