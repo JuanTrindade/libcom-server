@@ -7,7 +7,7 @@ Libcom is a simple app built for academic purposes. The name comes from (Lib)rar
 ## Built with
 
 - Node.js + Express
-- TypeORM
+- Knex
 - Postgres
 
 ## Building
