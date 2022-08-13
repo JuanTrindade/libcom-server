@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
