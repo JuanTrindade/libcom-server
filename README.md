@@ -17,6 +17,7 @@ First, clone or download the repository. After that, install the projects depend
 ```
 $ git clone git@github.com:JuanTrindade/libcom-server.git
 $ cd libcom-server
+$ cp .env.example .env
 $ npm install
 ```
 
@@ -26,6 +27,12 @@ You'll need a Postgres instance running on your machine. If you have already, th
 
 ```
 $ docker compose up -d
+```
+
+After that, you'll need to run the Knex migrations:
+
+```
+$ npx knex migrate:latest
 ```
 
 To start a local instance of the app, execute:
