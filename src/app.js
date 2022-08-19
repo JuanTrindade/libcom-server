@@ -7,6 +7,4 @@ const app = express();
 app.use(express.json());
 app.use(routes);
 
-app.get('/', (req, res) => res.send({ message: 'ok' }));
-
 module.exports = app;
