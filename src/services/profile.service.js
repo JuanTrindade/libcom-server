@@ -1,12 +1,15 @@
 const database = require('../database');
 
 exports.create = async (profile) => {
-  await database('profiles').insert(profile);
-
-  const [newProfile] = await database('profiles')
+  const [existingProfile] = await database('profiles')
     .select('*')
     .where({ username: profile.username })
     .limit(1);
 
-  return newProfile;
+  if (existingProfile) {
+    throw new Error(`Profile with username ${profile.username} already exists`);
+  }
+
+  await database('profiles').insert(profile);
+  return profile;
 };
