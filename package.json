@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest"
+    "setup:db": "knex migrate:latest",
+    "setup:test-db": "cross-env NODE_ENV=testing knex migrate:latest",
+    "test": "cross-env NODE_ENV=testing jest"
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "knex": "^2.2.0",
